@@ -7,7 +7,6 @@ int search(int arr[], int n, int t) {
     }
     return -1;
 }
-
 int recsearch(int arr[], int n, int t, int indx) {
     if (indx >= n) return -1; 
     if (arr[indx] == t) return indx; 
@@ -17,7 +16,6 @@ int recsearch(int arr[], int n, int t, int indx) {
 int main() {
     int n, ln;
     cin >> n;
-
     int licarr[n]; 
     for (int i = 0; i < n; i++) {
         cin >> licarr[i];
@@ -28,7 +26,6 @@ int main() {
 
     int nors = search(licarr, n, ln);
     int recus = recsearch(licarr, n, ln, 0);
-
     if (nors != -1) {
         cout << "The car is at " << nors + 1 << endl;
     } else {
