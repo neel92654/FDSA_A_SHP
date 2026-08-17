@@ -66,33 +66,30 @@ void insertionsort(int arr[], int n) {
 
 ## Issues Faced While Solving Problem - 2:
 
-There were no issues while solving this problem just how can the count be made simpler for 0, 1 and 2 code buckets with the help of low, mid and high as variables in code: 
+There were no issues while solving this problem just how can the count be made simpler for 0, 1 and 2 code buckets with the help counts list: 
 ```cpp
-void sortpb(int buckets[], int n) {
-  int low = 0;
-  int mid = 0;
-  int high = n - 1;
-  int temp;
+int b[] = {1, 0, 2, 1, 0, 1, 0};
+    int n = sizeof(b) / sizeof(b[0]);
 
-  while (mid <= high) {
-    switch (buckets[mid]) {
-    case 0:
-      temp = buckets[low];
-      buckets[low] = buckets[mid];
-      buckets[mid] = temp;
-      low++;
-      mid++;
-      break;
-    case 1:
-      mid++;
-      break;
-    case 2:
-      temp = buckets[mid];
-      buckets[mid] = buckets[high];
-      buckets[high] = temp;
-      high--;
-      break;
+    int count[3] = {0};
+    for (int i = 0; i < n; i++) {
+        count[b[i]]++;
     }
-  }
-}
+
+    int index = 0;
+
+    while (count[0] > 0) {
+        b[index++] = 0;
+        count[0]--;
+    }
+
+    while (count[1] > 0) {
+        b[index++] = 1;
+        count[1]--;
+    }
+
+    while (count[2] > 0) {
+        b[index++] = 2;
+        count[2]--;
+    }
 ```
