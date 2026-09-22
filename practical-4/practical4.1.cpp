@@ -83,6 +83,4 @@ int main() {
     insertAtPosition(head, 15, 1);
     cout << "After position insertion: ";
     display(head);
-
-    return 0;
 }
