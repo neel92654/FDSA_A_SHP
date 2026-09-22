@@ -78,6 +78,4 @@ int main() {
   bubblesort(arr1, n);
   selectionsort(arr2, n);
   insertionsort(arr3, n);
-
-  return 0;
 }
