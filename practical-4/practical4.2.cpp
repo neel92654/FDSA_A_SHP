@@ -98,7 +98,4 @@ int main() {
     ListNode* p4=head;
     cout<<"Traversal in linked list: ";
     printList(head);
-    
-
-    return 0;
 }
