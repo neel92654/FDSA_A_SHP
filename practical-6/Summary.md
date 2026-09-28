@@ -2,7 +2,7 @@
 
 **Issues Faced While Solving Problem - 1:** 
 
-There where not any issues faced just was to understand the checking of is the stack full or is empty conditions, which was done like this condition top == 4 checks whether the fixed-size stack is full, and if it is full, another element cannot be added.
+There where not any issues faced just was to understand the checking of is the stack full or is empty conditions, which was done by keeping conditions to checks whether the fixed-size stack is full, and if it is full, another element cannot be added.
 
 ```cpp
 if (top == -1)
